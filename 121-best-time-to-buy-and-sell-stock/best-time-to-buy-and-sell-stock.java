@@ -1,0 +1,33 @@
+class Solution {
+    public int maxProfit(int[] prices) {
+        int minPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+        for(int i=0;i<prices.length;i++){
+            if(prices[i]<minPrice){
+                minPrice = prices[i];
+            }
+            else{
+                maxProfit = Math.max(maxProfit,prices[i]-minPrice);
+            }
+        }
+        return maxProfit;
+    }
+}
+
+
+// class Solution {
+//     public int maxProfit(int[] prices) {
+//         int minPrice = Integer.MAX_VALUE;
+//         int maxProfit = 0;
+
+//         for (int price : prices) {
+//             if (price < minPrice) {
+//                 minPrice = price; // buy at lowest price so far
+//             } else {
+//                 maxProfit = Math.max(maxProfit, price - minPrice); // sell at current price
+//             }
+//         }
+
+//         return maxProfit;
+//     }
+// }
