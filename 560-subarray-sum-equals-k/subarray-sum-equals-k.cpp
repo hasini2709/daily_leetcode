@@ -10,12 +10,8 @@ public:
             if(m.count(sum-k)){
                 count += m[sum-k];
             }
-            if(m.count(sum)){
-                m[sum]++;
-            }
-            else{
-                m[sum]=1;
-            }
+            
+            m[sum]++;
         }
         return count;
     }
